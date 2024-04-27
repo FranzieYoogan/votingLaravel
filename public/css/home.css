@@ -12,21 +12,31 @@
 
 }
 
+.buttonStyle {
+
+    background-color: transparent;
+
+    border: none;
+    margin-left: 35%;
+}
+
 .containerItems {
 
     display: flex;
     justify-content: center;
-    margin-top: 3em;
+    margin-top: 5em;
 
-    width: 90%;
-    padding: 20px;
+
+    width: 100%;
+
  
 
 }
 
 .formStyle {
 
-    margin-left: 5em;
+display: flex;
+
 
 }
 
@@ -35,7 +45,8 @@
     width: 80px;
     border-radius: 40px;
     border: 1px solid black;
-
+    position: relative;
+    bottom: 15   px;
         cursor: pointer;
 
 }
@@ -56,7 +67,7 @@
 @media only screen and (width: 400px) {
     .constestantName {
 
-        font-size: 8px !important;
+        font-size: 15px !important;
         width: 150%;
 
 
@@ -74,11 +85,7 @@
 
     }
 
-    body {
-
-        overflow: hidden !important;
-    
-      }
+ 
 
     .formStyle {
 
@@ -88,7 +95,7 @@
 
     .contestantPic {
 
-        width: 30px;
+        width: 45px;
 
     
     }
@@ -100,7 +107,7 @@
 @media only screen and (width: 554px) {
     .constestantName {
 
-        font-size: 10px !important;
+        font-size: 25px !important;
         
     }
 
@@ -114,7 +121,7 @@
     
     .contestantPic {
 
-        width: 40px;
+        width: 60px;
   
     
     }
@@ -123,8 +130,3 @@
   }
 
 
-  body {
-
-    overflow: hidden !important;
-
-  }

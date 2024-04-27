@@ -27,6 +27,6 @@ Route::get('/voted', function () {
 
 Route::get('/', [Controller::class, 'getContestant']);
 
-Route::post('/', [Controller::class, 'voted']);
+
 
 Route::post('/voted', [Controller::class, 'voted']);

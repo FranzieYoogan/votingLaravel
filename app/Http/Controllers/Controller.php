@@ -15,7 +15,7 @@ class Controller extends BaseController
 
     public function getContestant() {
 
-        $contestants = DB::select('select * from astroPhysicist ');
+        $contestants =  DB::select('select * from astroPhysicist ');
 
         return view('welcome', ['contestants' => $contestants]);
 
@@ -23,10 +23,16 @@ class Controller extends BaseController
 
     public function voted(Request $request) {
 
-        $contestantName = $request->input('contestantName');
+        $contestantName = $request->input('contestantName') ;
 
-        DB::update("update astroPhysicist set contestantVotes = contestantVotes + 1  where contestantName = '$contestantName' ");
-        $contestants = DB::select('select * from astroPhysicist ');
+      
+
+        $contestants = DB::select("select * from astroPhysicist where contestantId = '$contestantName' ");
+        
+
+
+        DB::update("update astroPhysicist set contestantVotes = contestantVotes + 1  where contestantId = '$contestantName' ");
+
 
         return view('voted', ['contestants' => $contestants]);
 

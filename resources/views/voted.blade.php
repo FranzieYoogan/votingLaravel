@@ -18,6 +18,8 @@
 
         <h1 class="votedStyle">voted</h1>  
 
+
+
     </div>
 
     </section>

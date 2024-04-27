@@ -29,7 +29,7 @@
        
             <div class="containerItems">
            
-                <div style="display: flex">
+             
 
                   
 
@@ -45,35 +45,34 @@
         @if(isset($contestants))
 
         
-        @foreach ($contestants as $data)
+  
+              
 
-                    <form method="POST" action="/voted" class="formStyle">
-                        @csrf
-         
-            
-        <div >
+                    <div >
+
+                  
+                        @foreach ($contestants as $data)
+                        <form method="POST" action="/voted" style="display: flex; gap:1em; margin-bottom: 1em">
+                            @csrf
           
+               
             <h1 class="constestantName">{{$data->contestantName}}</h1>
-            <input type="text" name="contestantName" style="display: none" value="{{$data->contestantName}}">
+            <input type="text" name="contestantName" style="display: none" value="{{$data->contestantId}}">
+            <button type="submit" class="buttonStyle"><img  class="contestantPic" src="{{asset("$data->contestantPic")}}" alt=""></button>
+                
+                
+                </form>
+                @endforeach
+    </div>
+
+      
+           
         
-        </div>
+     
+  
 
-        <div style="display: flex; justify-content: center">
-            <img onclick="clickHidden()" class="contestantPic" src="{{asset("$data->contestantPic")}}" alt="">
-            <input type="submit" id="click" style="display: none">
-        </div>
-    </form>
-
-    <script>
-
-        function clickHidden() {
-
-            document.getElementById('click').click();
-        }
-
-    </script>
-        
-        @endforeach
+  
+      
 
         @endif
 
