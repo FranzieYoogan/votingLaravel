@@ -1,0 +1,130 @@
+.containerAll {
+
+    display: flex;
+    justify-content: center;
+ 
+}
+
+.Title {
+
+    text-align: center;
+    margin-top: 1em;
+
+}
+
+.containerItems {
+
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+
+    width: 90%;
+    padding: 20px;
+ 
+
+}
+
+.formStyle {
+
+    margin-left: 5em;
+
+}
+
+.contestantPic {
+
+    width: 80px;
+    border-radius: 40px;
+    border: 1px solid black;
+
+        cursor: pointer;
+
+}
+
+.contestantPic:hover {
+
+    transform: scale(1.2);
+
+}
+
+.constestantName {
+
+    font-size: 25px !important;
+
+}
+
+
+@media only screen and (width: 400px) {
+    .constestantName {
+
+        font-size: 8px !important;
+        width: 150%;
+
+
+    }
+
+    .formStyle {
+
+        position: relative;
+    
+    }
+
+    .Title {
+
+        font-size: 25px  !important;
+
+    }
+
+    body {
+
+        overflow: hidden !important;
+    
+      }
+
+    .formStyle {
+
+        margin-left: 0.3em;
+        
+        }
+
+    .contestantPic {
+
+        width: 30px;
+
+    
+    }
+    
+  }
+
+  
+
+@media only screen and (width: 554px) {
+    .constestantName {
+
+        font-size: 10px !important;
+        
+    }
+
+   
+
+    .formStyle {
+
+        margin-left: 2em;
+        
+        }
+    
+    .contestantPic {
+
+        width: 40px;
+  
+    
+    }
+    
+
+  }
+
+
+  body {
+
+    overflow: hidden !important;
+
+  }

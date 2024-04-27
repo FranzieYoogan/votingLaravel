@@ -1,0 +1,48 @@
+.collapse {
+
+    margin-left: 75%;
+}
+
+.nav-item {
+
+    margin-left: 1em;
+
+}
+
+body {
+
+    overflow: hidden !important;
+
+  }
+
+.navbar {
+
+    width: 100% !important;
+
+
+}
+
+.navIcon {
+
+        width: 45px;
+        border-radius: 40px;
+        box-shadow: 0px 0px 4px 0px black;
+
+}
+
+@media only screen and (width: 400px) {
+    .collapse {
+
+        margin-left: 0%;
+    }
+    
+  }
+
+
+  @media only screen and (width: 554px) {
+    .collapse {
+
+        margin-left: 0%;
+    }
+    
+  }

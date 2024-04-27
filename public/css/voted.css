@@ -1,0 +1,20 @@
+
+.containerAll {
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.votedStyle {
+
+    color: green;
+    font-weight: 900;
+    font-size: 50px !important;
+}
+
+.containerItems {
+
+    margin-top: 8em;
+
+}
