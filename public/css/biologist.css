@@ -42,12 +42,14 @@ display: flex;
 
 .contestantPic {
 
-    width: 80px;
+    width: 60px;
+    height: 60px;
     border-radius: 40px;
     border: 1px solid black;
     position: relative;
-    bottom: 15   px;
-        cursor: pointer;
+    bottom: 25px;
+
+
 
 }
 
@@ -60,14 +62,14 @@ display: flex;
 .constestantName {
 
     font-size: 25px !important;
-
+    width: 100%;
 }
 
 
 @media only screen and (width: 400px) {
     .constestantName {
 
-        font-size: 15px !important;
+        font-size: 25px !important;
         width: 150%;
 
 
@@ -95,9 +97,9 @@ display: flex;
 
     .contestantPic {
 
-        width: 45px;
-
-    
+        width: 50px;
+        height: 50px;
+        bottom: 20px !important;
     }
     
   }
@@ -122,7 +124,7 @@ display: flex;
     .contestantPic {
 
         width: 60px;
-  
+        height: 60px;
     
     }
     
@@ -167,3 +169,5 @@ display: flex;
     }
     
   }
+
+

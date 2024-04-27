@@ -29,6 +29,14 @@ class Controller extends BaseController
 
     }
 
+    public function getBiologist() {
+
+        $contestants =  DB::select('select * from biologist ');
+
+        return view('biologist', ['contestants' => $contestants]);
+
+    }
+
     public function voted(Request $request) {
 
         $contestantName = $request->input('contestantName') ;
@@ -57,6 +65,20 @@ class Controller extends BaseController
             
         DB::update("update chemist set contestantVotes = contestantVotes + 1  where contestantId = '$contestantName' ");
         return view('voted', ['chemist' => $chemist]);
+    }
+
+    }
+
+    public function votedBiologist(Request $request) {
+
+        $contestantName = $request->input('contestantName') ;
+        $biologist =  DB::select("select * from biologist where contestantId = '$contestantName' ");
+
+
+    if($biologist) {
+            
+        DB::update("update biologist set contestantVotes = contestantVotes + 1  where contestantId = '$contestantName' ");
+        return view('voted', ['biologist' => $biologist]);
     }
 
     }

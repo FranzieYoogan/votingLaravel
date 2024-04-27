@@ -27,6 +27,9 @@ Route::get('/chemist', function () {
     return view('chemist');
 });
 
+Route::get('/biologist', function () {
+    return view('biologist');
+});
 
 
 
@@ -34,6 +37,10 @@ Route::get('/', [Controller::class, 'getContestant']);
 
 Route::get('/chemist', [Controller::class, 'getChemist']);
 
+Route::get('/biologist', [Controller::class, 'getBiologist']);
+
 Route::post('/voted', [Controller::class, 'voted']);
 
 Route::post('/voted', [Controller::class, 'votedChemist']);
+
+Route::post('/voted', [Controller::class, 'votedBiologist']);

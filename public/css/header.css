@@ -42,3 +42,35 @@
     }
     
   }
+
+  @media only screen and (width: 320px) {
+    .collapse {
+
+        margin-left: 0%;
+    }
+    
+  }
+
+  @media only screen and (width: 375px) {
+    .collapse {
+
+        margin-left: 0%;
+    }
+    
+  }
+
+  @media only screen and (width: 425px) {
+    .collapse {
+
+        margin-left: 0%;
+    }
+    
+  }
+
+  @media only screen and (width: 768px) {
+    .collapse {
+
+        margin-left: 0%;
+    }
+    
+  }
