@@ -23,10 +23,17 @@ Route::get('/voted', function () {
     return view('voted');
 });
 
+Route::get('/chemist', function () {
+    return view('chemist');
+});
+
+
 
 
 Route::get('/', [Controller::class, 'getContestant']);
 
-
+Route::get('/chemist', [Controller::class, 'getChemist']);
 
 Route::post('/voted', [Controller::class, 'voted']);
+
+Route::post('/voted', [Controller::class, 'votedChemist']);

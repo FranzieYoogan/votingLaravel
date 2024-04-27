@@ -33,7 +33,7 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="/">AstroPhysicist</a></li>
-                  <li><a class="dropdown-item" href="/Chemistrician">Chemistrician</a></li>
+                  <li><a class="dropdown-item" href="/chemist">Chemist</a></li>
                   <li><a class="dropdown-item" href="/biologist">Biologist</a></li>
                 </ul>
               </li>

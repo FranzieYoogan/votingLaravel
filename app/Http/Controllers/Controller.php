@@ -21,20 +21,44 @@ class Controller extends BaseController
 
     }
 
+    public function getChemist() {
+
+        $contestants =  DB::select('select * from chemist ');
+
+        return view('chemist', ['contestants' => $contestants]);
+
+    }
+
     public function voted(Request $request) {
 
         $contestantName = $request->input('contestantName') ;
-
-      
-
-        $contestants = DB::select("select * from astroPhysicist where contestantId = '$contestantName' ");
+        
         
 
+        $contestants = DB::select("select * from astroPhysicist where contestantId = '$contestantName' ");
 
-        DB::update("update astroPhysicist set contestantVotes = contestantVotes + 1  where contestantId = '$contestantName' ");
 
+        if($contestants) {
 
-        return view('voted', ['contestants' => $contestants]);
+            DB::update("update astroPhysicist set contestantVotes = contestantVotes + 1  where contestantId = '$contestantName' ");
+            return view('voted', ['contestants' => $contestants]);
+        }
+
 
     }
+
+    public function votedChemist(Request $request) {
+
+        $contestantName = $request->input('contestantName') ;
+        $chemist =  DB::select("select * from chemist where contestantId = '$contestantName' ");
+
+
+    if($chemist) {
+            
+        DB::update("update chemist set contestantVotes = contestantVotes + 1  where contestantId = '$contestantName' ");
+        return view('voted', ['chemist' => $chemist]);
+    }
+
+    }
+
 }
