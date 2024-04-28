@@ -79,4 +79,16 @@ class Controller extends BaseController
 
     }
 
+    public function getResult() {
+
+        $astrophysicist =  DB::select('select * from astroPhysicist ');
+
+        $chemist =  DB::select('select * from chemist ');
+
+        $biologist =  DB::select('select * from biologist ');
+
+        return view('result', ['biologist' => $biologist, 'astroPhysicist' => $astrophysicist, 'chemist' => $chemist]);
+
+    }
+
 }

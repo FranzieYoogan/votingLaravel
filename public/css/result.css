@@ -1,0 +1,39 @@
+.contestantPic {
+
+    width: 50px;
+    margin-bottom: 1em;
+    height: 50px;
+    border-radius: 40px;
+    border: 1px solid black;
+    
+
+}
+
+.containerAll {
+
+        display: flex;
+        justify-content: center;
+ 
+}
+
+.containerItems {
+
+    display: flex;
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.containerStuff {
+
+    
+
+}
+
+.votes {
+
+    margin-left: 5em;
+    color: green;
+    font-weight: 900;
+    
+
+}

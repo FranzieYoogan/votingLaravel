@@ -39,7 +39,7 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="#">Result</a>
+                <a class="nav-link " aria-current="page" href="/result">Result</a>
               </li>
             </ul>
           </div>

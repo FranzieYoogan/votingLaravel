@@ -31,9 +31,15 @@ Route::get('/biologist', function () {
     return view('biologist');
 });
 
+Route::get('/result', function () {
+    return view('result');
+});
+
 
 
 Route::get('/', [Controller::class, 'getContestant']);
+
+Route::get('/result', [Controller::class, 'getResult']);
 
 Route::get('/chemist', [Controller::class, 'getChemist']);
 
