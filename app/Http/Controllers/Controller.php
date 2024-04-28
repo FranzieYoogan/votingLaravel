@@ -36,24 +36,20 @@ class Controller extends BaseController
         return view('biologist', ['contestants' => $contestants]);
 
     }
-
-    public function voted(Request $request) {
+    public function votedAstrophysicist(Request $request) {
 
         $contestantName = $request->input('contestantName') ;
-        
-        
-
-        $contestants = DB::select("select * from astroPhysicist where contestantId = '$contestantName' ");
+        $astroPhysicist =  DB::select("select * from astroPhysicist where contestantId = '$contestantName' ");
 
 
-        if($contestants) {
 
-            DB::update("update astroPhysicist set contestantVotes = contestantVotes + 1  where contestantId = '$contestantName' ");
-            return view('voted', ['contestants' => $contestants]);
-        }
-
+            
+        DB::update("update astroPhysicist set contestantVotes = contestantVotes + 1  where contestantId = '$contestantName' ");
+        return view('voted', ['astroPhysicist' => $astroPhysicist]);
+    
 
     }
+
 
     public function votedChemist(Request $request) {
 
@@ -61,11 +57,11 @@ class Controller extends BaseController
         $chemist =  DB::select("select * from chemist where contestantId = '$contestantName' ");
 
 
-    if($chemist) {
+
             
         DB::update("update chemist set contestantVotes = contestantVotes + 1  where contestantId = '$contestantName' ");
         return view('voted', ['chemist' => $chemist]);
-    }
+    
 
     }
 
@@ -75,11 +71,11 @@ class Controller extends BaseController
         $biologist =  DB::select("select * from biologist where contestantId = '$contestantName' ");
 
 
-    if($biologist) {
+
             
         DB::update("update biologist set contestantVotes = contestantVotes + 1  where contestantId = '$contestantName' ");
         return view('voted', ['biologist' => $biologist]);
-    }
+    
 
     }
 

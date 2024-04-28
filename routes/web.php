@@ -39,8 +39,16 @@ Route::get('/chemist', [Controller::class, 'getChemist']);
 
 Route::get('/biologist', [Controller::class, 'getBiologist']);
 
-Route::post('/voted', [Controller::class, 'voted']);
+Route::post('/voted', [Controller::class, 'votedAstrophysicist']);
 
 Route::post('/voted', [Controller::class, 'votedChemist']);
 
 Route::post('/voted', [Controller::class, 'votedBiologist']);
+
+
+
+Route::post('/', [Controller::class, 'votedAstrophysicist']);
+
+Route::post('/chemist', [Controller::class, 'votedChemist']);
+
+Route::post('/biologist', [Controller::class, 'votedBiologist']);

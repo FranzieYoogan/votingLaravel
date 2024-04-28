@@ -52,7 +52,7 @@
 
                   
                         @foreach ($contestants as $data)
-                        <form method="POST" action="/voted" style="display: flex; gap:1em; margin-bottom: 1em">
+                        <form method="POST" action="/chemist" style="display: flex; gap:1em; margin-bottom: 1em">
                             @csrf
           
                
